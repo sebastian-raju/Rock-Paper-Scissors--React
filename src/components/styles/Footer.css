@@ -62,7 +62,7 @@
 
 @media(min-height:800px){
   .btn-container{
-    transform: translateY(-60px);
+    transform: translateY(-30px);
   }
 }
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Result({playerMove, setPlayerScore, setComputerScore}) {
+function Result({playerMove, setPlayerScore, setComputerScore, playerScore, computerScore}) {
 
   const [computerMove, setComputerMove] = useState("");
   const [result, setResult] = useState("");
@@ -45,6 +45,13 @@ function Result({playerMove, setPlayerScore, setComputerScore}) {
 
   // }
 
+  const checkingScore = () => {
+    if(playerScore === 5 || computerScore === 5){
+      setPlayerScore(value => value = 0);
+      setComputerScore(value => value = 0);
+    }
+  }
+
 
   useEffect(()=>{
     getComputerMove();
@@ -84,7 +91,16 @@ function Result({playerMove, setPlayerScore, setComputerScore}) {
           
           <div className="final-outcome-container">
             <div className="final-outcome">{result}</div>
-            <Link to={'/'} style={{textDecoration:"none"}}><div className={`play-again-btn ${result !== ""? "displayBlock": "displayNone"}`}>PLAY AGAIN</div></Link>
+            <Link to={'/'} style={{textDecoration:"none"}}><div className={`play-again-btn ${result !== ""? "displayBlock": "displayNone"}`} onClick={checkingScore}>PLAY AGAIN</div></Link>
+            {
+              playerScore === 5?
+              <div className={`match-outcome ${result !== ""? "displayBlock": "displayNone"}`} >
+                YOU WON THE GAME !!!
+              </div>: computerScore === 5?
+              <div className={`match-outcome ${result !== ""? "displayBlock": "displayNone"}`} > 
+              COMPUTER WON THE GAME 
+              </div> : <div className={`match-outcome ${result !== ""? "displayBlock": "displayNone"}`} > KEEP PLAYING !</div>
+            }
           </div>
 
           <div className="computer-choice">

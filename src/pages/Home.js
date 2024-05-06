@@ -19,8 +19,7 @@ function Home() {
       
       <Routes>
         <Route path='/' element={<Moves setPlayerMove = {setPlayerMove}/>}/>
-        <Route path='/result' element={<Result setPlayerScore={setPlayerScore} setComputerScore={setComputerScore} 
-        playerMove={playerMove} />}/>
+        <Route path='/result' element={<Result setPlayerScore={setPlayerScore} setComputerScore={setComputerScore} playerScore={playerScore} computerScore ={computerScore} playerMove={playerMove} />}/>
       </Routes>
       
       <Footer setPlayerScore={setPlayerScore} setComputerScore={setComputerScore}/>

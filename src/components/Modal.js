@@ -13,6 +13,7 @@ function Modal({toggle}) {
           </div>
           <div className="close-button" onClick={toggle}><i className="fa-solid fa-square-xmark fa-2xl"></i></div>
         </div>
+        <div className='game-rule'>Compete against the computer in a game of rock-paper-scissors. The first player to score 5 points wins the match.</div>
         <div className="image-container">
         </div>
       </div>

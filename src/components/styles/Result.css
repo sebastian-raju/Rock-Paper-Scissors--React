@@ -153,6 +153,11 @@
   border-radius: 50%;
 }
 
+.match-outcome{
+  font-size: 20px;
+  margin-top: 30px;
+}
+
 
 @media(max-width:620px){
   .result-grid{
@@ -162,6 +167,10 @@
   .final-outcome-container:nth-child(2){
     grid-row: 3;
     grid-column: span 2;
+  }
+
+  .result-container{
+    padding: 30px 20px;
   }
 
   .playerMove{
