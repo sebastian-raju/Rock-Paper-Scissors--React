@@ -1,0 +1,53 @@
+
+:root{
+  --scissor-gradient: linear-gradient(rgb(236, 158, 14) , rgb(236, 169, 34));
+  --paper-gradient: linear-gradient(rgb(72, 101, 244) , rgb(86, 113, 245));
+  --rock-gradient: linear-gradient(rgb(220, 46, 78) , rgb(221, 64, 93));
+
+  --dark-text: hsl(229, 25%, 31%);
+  --score-text: hsl(229, 64%, 46%);
+  --header-outline: hsl(217, 16%, 45%);
+
+  --background-radiant: radial-gradient(circle at top center, rgb(31, 55, 86, 1) 0%, rgb(20, 21, 57, 1) 100%);
+}
+
+
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-radiant);
+  height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  color: white;
+  position: relative;
+}
+
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
